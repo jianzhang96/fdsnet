@@ -12,6 +12,19 @@ Python 3.8.5 PyTorch 1.9.0 CUDA 11.1
 ```
 conda env create -f requirements.yml
 ```
+
+### Usage
+First download the dataset and the auxiliary ground-truth and modify the path in the /core/data/dataloader.
+train model
+```
+CUDA_VISIBLE_DEVICES=0 python train.py --model fdsnet --use-ohem True --aux True \
+									   --dataset phone_voc --lr 0.0001 --epochs 150 \
+									   --batch-size 8
+```
+eval model. we eval the image one by one.
+```
+python eval.py
+```
 ### Pretrained Model
 | Dataset | Pth | mIoU |
 | :------| :------ | :------ |
@@ -20,7 +33,7 @@ conda env create -f requirements.yml
 | NEU-Seg | [fdsnet__sd_voc_best_model.pth](https://1drv.ms/u/s!AhqlXalcO8Tlf7DoUKO59J82GAM?e=GLIt9X) | 78.8 |
 
 ### Results
-![results](./results.jpg)
+![results](./docs/results.jpg)
 
 ### Code Borrow
 [Semantic Segmentation on PyTorch](https://github.com/Tramac/awesome-semantic-segmentation-pytorch) <br>
