@@ -3,6 +3,7 @@ FDSNet: An Accurate Real-Time Surface Defect Segmentation Network
 
 ### Dataset
 [MSD](https://github.com/jianzhang96/MSD) dataset.<br/>
+The generated auxiliary ground-truth [AuxiliaryGT](https://1drv.ms/u/s!AhqlXalcO8TlgQNVPQYyJPoBQG1k?e=gqXnRr) for MSD dataset.
 The images of MSD dataset are downsampled to 1440×810 during training and test. <br>
 We convert [SD-saliency-900](https://github.com/SongGuorong/MCITF/tree/master/SD-saliency-900) and [Magnetic-tile-defect-datasets](https://github.com/abin24/Magnetic-tile-defect-datasets.) (denoted as MT-Defect) dataset to PASCAL VOC format and divide the datasets
 into train: val: test = 6: 2: 2 randomly. We use trainval-test for NEU-Seg and MT-Defect and train-test for MSD dataset. The converted datasets can be downloaded here: [MT-Defect](https://1drv.ms/u/s!AhqlXalcO8TlgQLtuDrRig6JfIju?e=wE8sjx) and [NEU-Seg](https://1drv.ms/u/s!AhqlXalcO8TlgQGHVQR0soRxX76b?e=Nx0FpY).
@@ -15,9 +16,10 @@ conda env create -f requirements.yml
 
 ### Usage
 First download the dataset and the auxiliary ground-truth. Put the auxiliary GT to the data folder and modify the path in the /core/data/dataloader.<br/>
+when train model on NEU-Seg, set scale-ratio=None. when train model on MT-Defect, set crop size=450 and base_size not None. <br/>
 Train model
 ```
-CUDA_VISIBLE_DEVICES=0 python train.py --model fdsnet --use-ohem True --aux True --dataset phone_voc --lr 0.0001 --epochs 150 --batch-size 8
+CUDA_VISIBLE_DEVICES=0 python train.py --model fdsnet --use-ohem True --aux True --dataset phone_voc --scale-ratio 0.75 --lr 0.0001 --epochs 150 --batch-size 8
 ```
 Eval model. We eval the image one by one.
 ```

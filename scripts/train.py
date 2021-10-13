@@ -50,7 +50,7 @@ def parse_args():
                         help='dataset name (default: pascal_voc)')
     parser.add_argument('--base-size', type=int, default=None,#520
                         help='base image short width size')
-    parser.add_argument('--crop-size', type=int, default=None,# 480
+    parser.add_argument('--crop-size', type=int, default=None,# 450
                         help='crop image size')
     parser.add_argument('--pad-size', type=int, default=None,# data padding
                         help='padding image size')
