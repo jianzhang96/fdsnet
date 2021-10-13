@@ -14,14 +14,12 @@ conda env create -f requirements.yml
 ```
 
 ### Usage
-First download the dataset and the auxiliary ground-truth and modify the path in the /core/data/dataloader.
-train model
+First download the dataset and the auxiliary ground-truth. Put the auxiliary GT to the data folder and modify the path in the /core/data/dataloader.<br/>
+Train model
 ```
-CUDA_VISIBLE_DEVICES=0 python train.py --model fdsnet --use-ohem True --aux True \
-									   --dataset phone_voc --lr 0.0001 --epochs 150 \
-									   --batch-size 8
+CUDA_VISIBLE_DEVICES=0 python train.py --model fdsnet --use-ohem True --aux True --dataset phone_voc --lr 0.0001 --epochs 150 --batch-size 8
 ```
-eval model. we eval the image one by one.
+Eval model. We eval the image one by one.
 ```
 python eval.py
 ```
