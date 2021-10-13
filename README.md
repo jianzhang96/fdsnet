@@ -9,7 +9,8 @@ We convert [SD-saliency-900](https://github.com/SongGuorong/MCITF/tree/master/SD
 into train: val: test = 6: 2: 2 randomly. We use trainval-test for NEU-Seg and MT-Defect and train-test for MSD dataset. The converted datasets can be downloaded here: [MT-Defect](https://1drv.ms/u/s!AhqlXalcO8TlgQLtuDrRig6JfIju?e=wE8sjx) and [NEU-Seg](https://1drv.ms/u/s!AhqlXalcO8TlgQGHVQR0soRxX76b?e=Nx0FpY).
 
 ### Environment
-Python 3.8.5 PyTorch 1.9.0 CUDA 11.1
+Python 3.8.5 PyTorch 1.9.0 CUDA 11.1 <br/>
+one NVIDIA GTX 1080Ti GPU
 ```
 conda env create -f requirements.yml
 ```
@@ -26,11 +27,11 @@ Eval model. We eval the image one by one.
 python eval.py
 ```
 ### Pretrained Model
-| Dataset | Pth | mIoU |
-| :------| :------ | :------ |
-| MSD | [fdsnet__phone_voc_best_model.pth](https://1drv.ms/u/s!AhqlXalcO8TlfvMadgOHhCtN7Po?e=yhg6aD) | 90.2 |
-| MT-Defect | [fdsnet__mt_voc_best_model.pth](https://1drv.ms/u/s!AhqlXalcO8TlgQDawGlGxSULqrBQ?e=bXq6TS) | 63.9 |
-| NEU-Seg | [fdsnet__sd_voc_best_model.pth](https://1drv.ms/u/s!AhqlXalcO8Tlf7DoUKO59J82GAM?e=GLIt9X) | 78.8 |
+| Dataset | Pth | mIoU | FPS |
+| :------| :------ | :------ |  :------ |
+| MSD | [fdsnet__phone_voc_best_model.pth](https://1drv.ms/u/s!AhqlXalcO8TlfvMadgOHhCtN7Po?e=yhg6aD) | 90.2 | 135.0 |
+| MT-Defect | [fdsnet__mt_voc_best_model.pth](https://1drv.ms/u/s!AhqlXalcO8TlgQDawGlGxSULqrBQ?e=bXq6TS) | 63.9 | 181.5 |
+| NEU-Seg | [fdsnet__sd_voc_best_model.pth](https://1drv.ms/u/s!AhqlXalcO8Tlf7DoUKO59J82GAM?e=GLIt9X) | 78.8 | 186.1 |
 
 ### Results
 ![results](./docs/results.jpg)
