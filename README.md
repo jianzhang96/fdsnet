@@ -29,6 +29,7 @@ python eval.py
 ## Pretrained Model
 | Dataset | Pth | mIoU | FPS |
 | :------| :------ | :------ |  :------ |
+| MSD | [fastscnn__phone_voc_best_model.pth](https://1drv.ms/u/s!AhqlXalcO8TlgQQs7ceX4GQTmFsX?e=dJUuFg) | 89.1 | 115.0 |
 | MSD | [fdsnet__phone_voc_best_model.pth](https://1drv.ms/u/s!AhqlXalcO8TlfvMadgOHhCtN7Po?e=yhg6aD) | 90.2 | 135.0 |
 | MT-Defect | [fdsnet__mt_voc_best_model.pth](https://1drv.ms/u/s!AhqlXalcO8TlgQDawGlGxSULqrBQ?e=bXq6TS) | 63.9 | 181.5 |
 | NEU-Seg | [fdsnet__sd_voc_best_model.pth](https://1drv.ms/u/s!AhqlXalcO8Tlf7DoUKO59J82GAM?e=GLIt9X) | 78.8 | 186.1 |
