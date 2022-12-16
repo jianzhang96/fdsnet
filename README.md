@@ -1,8 +1,10 @@
 # FDSNet
 FDSNet: An Accurate Real-Time Surface Defect Segmentation Network
+![network](./docs/fdsnet.jpg)
+paper [[pdf](https://ieeexplore.ieee.org/abstract/document/9747311)]
 
 ## Dataset
-### ☆ [MSD](https://github.com/jianzhang96/MSD) dataset ☆ <br/>
+### ⭐️ [MSD](https://github.com/jianzhang96/MSD) dataset ⭐️
 The generated auxiliary ground-truth [AuxiliaryGT](https://1drv.ms/u/s!AhqlXalcO8TlgQNVPQYyJPoBQG1k?e=gqXnRr) for MSD dataset.
 The images of MSD dataset are downsampled to 1440×810 during training and test. <br>
 We convert [SD-saliency-900](https://github.com/SongGuorong/MCITF/tree/master/SD-saliency-900) and [Magnetic-tile-defect-datasets](https://github.com/abin24/Magnetic-tile-defect-datasets.) (denoted as MT-Defect) dataset to PASCAL VOC format and divide the datasets
