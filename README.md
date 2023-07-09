@@ -1,5 +1,5 @@
 # FDSNet
-FDSNet: An Accurate Real-Time Surface Defect Segmentation Network
+FDSNet: An Accurate Real-Time Surface Defect Segmentation Network - ICASSP 2022
 ![network](./docs/fdsnet.jpg)
 paper [[pdf](https://ieeexplore.ieee.org/abstract/document/9747311)]
 
